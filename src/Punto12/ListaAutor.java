@@ -15,7 +15,7 @@ public class ListaAutor {
     public ListaAutor() {
         listaAutores = new ArrayList<>();
         listaAutores.add(new Autor("Stacia","Misner",56));
-        listaAutores.add(new Autor("Chris","Rose",35));
+        listaAutores.add(new Autor("Luis","Joyanes Aguilar",66));
         listaAutores.add(new Autor("Dan","Brown",50));
     }
 

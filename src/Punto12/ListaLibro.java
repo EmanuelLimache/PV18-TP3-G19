@@ -17,7 +17,8 @@ public class ListaLibro {
     public ListaLibro() {
         listaLibros = new ArrayList<>();
         listaLibros.add(new Libro("Informatica","Visual Studio Add-Ins Succinctly",4568,200,new Autor("Stacia","Misner",56)));
-        listaLibros.add(new Libro("Informatica","Direct 3D Succinctly",7894,124,new Autor("Stacia","Misner",56)));
+        listaLibros.add(new Libro("Programacion","Fundamentos de la programacion",7894,124,new Autor("Luis","Joyanes Aguilar",66)));
+        listaLibros.add(new Libro("Programacion","Estructura de Datos en java",9788,924,new Autor("Luis","Joyanes Aguilar",66)));
         listaLibros.add(new Libro("Novela","Ángeles y Demonios",7264,45,new Autor("Dan","Brown",50)));
     }
 
@@ -37,6 +38,18 @@ public class ListaLibro {
             }
         }
     }
+    public void buscarLibroCategoria(Libro categoria){
+        for(Libro l:listaLibros){
+            if(categoria.getCategoria().equals(l.getCategoria())){
+                System.out.println("Libro Buscado es: "+l.getCategoria()+
+                                                   " -- "+l.getTitulo()+
+                                                    " -- "+l.getISBN()+
+                                                    " -- "+l.getPrecio()+
+                                                    " -- "+l.getAutor());
+            }
+        }
+    }
+    
     public List<Libro> getListaLibros() {
         return listaLibros;
     }
@@ -52,8 +65,10 @@ public class ListaLibro {
     }
     
     public void mostrarLibro(){
+        int cont=0;
         for(Libro l:listaLibros){
-            System.out.println("Categoria: "+l.getCategoria()+" Titulo: "+l.getTitulo());
+            System.out.println(cont +"Categoria: "+l.getCategoria()+" Titulo: "+l.getTitulo());
+            cont++;
         }
     }
     
@@ -83,7 +98,7 @@ public class ListaLibro {
         }
         return indice;
     }
-    
+    /*
     public void buscarLibro(){
         int indice,indice2;
         Scanner teclado1 = new Scanner(System.in);
@@ -110,5 +125,5 @@ public class ListaLibro {
                 break;
                 default: System.out.println("OPCION INCORRECTA");break;
         }               
-    }  
+    }**/  
 }

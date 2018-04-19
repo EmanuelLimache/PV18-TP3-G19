@@ -17,7 +17,9 @@ public class ListaCategoria {
         categorias.add("Informatica");
         categorias.add("Novela");        
     }
-
+    
+    
+    
     public List<String> getCategoria() {
         return categorias;
     }
